@@ -1,3 +1,3 @@
 # BPCA-BTPCA
 
-Boosting RPCA by Prior Subspace
+Matlab code for "Boosting RPCA by Prior Subspace".
