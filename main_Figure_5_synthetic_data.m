@@ -1,6 +1,8 @@
 clc
 clear
 close all
+addpath(genpath('.\algorithms'));
+addpath(genpath('.\utils'));
 
 n1 = 50;
 n2 = 50;
