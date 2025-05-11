@@ -50,10 +50,10 @@ for i_SNR = 1:numel(list_SNR)
                 L2 = MPCP(M, G, K, lambda, mu, rho, mu_max, eps, iter_max);
                 RSE2(i_SNR, i_r, i_rho_s, i_mc) = norm(L2 - L0, 'fro')^2 / norm(L0, 'fro')^2;
                 
-                %% M-PCP method
+                %% BPCA method
                 Wu = w(1, i_SNR) * eye(r);
                 Wv = Wu;
-                L3 = RPCA_subspace_multi_weight(M, G, K, Wu, Wv, lambda, mu, rho, mu_max, eps, iter_max);
+                L3 = BPCA(M, G, K, Wu, Wv, lambda, mu, rho, mu_max, eps, iter_max);
                 RSE3(i_SNR, i_r, i_rho_s, i_mc) = norm(L3 - L0, 'fro')^2 / norm(L0, 'fro')^2;
             end
         end
